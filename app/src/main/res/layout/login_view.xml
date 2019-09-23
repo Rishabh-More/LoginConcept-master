@@ -18,7 +18,6 @@
         android:id="@+id/logo"
         android:layout_width="@dimen/logo_size"
         android:layout_height="@dimen/logo_size"
-        android:layout_marginTop="32dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,7 +29,7 @@
         style="@style/Widget.TextInputLayout"
         android:layout_width="275dp"
         android:layout_height="65dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo">
@@ -43,36 +42,41 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        style="@style/Widget.TextInputLayout"
         android:id="@+id/password_input"
+        style="@style/Widget.TextInputLayout"
         android:layout_width="275dp"
         android:layout_height="65dp"
-        app:layout_constraintTop_toBottomOf="@+id/email_input"
         android:layout_marginTop="16dp"
-        app:passwordToggleTint="@color/color_input_hint"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_input"
+        app:passwordToggleTint="@color/color_input_hint">
+
         <android.support.design.widget.TextInputEditText
-            style="@style/Widget.TextEdit"
             android:id="@+id/password_input_edit"
+            style="@style/Widget.TextEdit"
             android:hint="@string/password_hint"
             android:inputType="textPassword" />
     </android.support.design.widget.TextInputLayout>
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/open_sans_bold_italic"
         android:gravity="center"
         android:text="@string/forgot_password"
         android:textColor="#FFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/caption"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_input" />
-
+        app:layout_constraintTop_toBottomOf="@+id/password_input"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.anazzubair.loginconcept.customviews.VerticalTextView
         android:id="@+id/caption"
@@ -89,5 +93,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.74" />
 </android.support.constraint.ConstraintLayout>

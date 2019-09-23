@@ -82,7 +82,7 @@ class AuthPagerAdapter(private val host: Controller, private val viewPager: Anim
     }
 
     override fun scale(hasFocus: Boolean) {
-        val scale = if (hasFocus) 1f else 1.4f
+        val scale = if (hasFocus) 1.4f else 1f
         val logoScale = if (hasFocus) 0.75f else 1f
         val logo = sharedElements[0]
 
